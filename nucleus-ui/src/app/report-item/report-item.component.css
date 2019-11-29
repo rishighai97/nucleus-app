@@ -1,0 +1,55 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 25%;
+}
+
+
+.remove-button{
+  display:none;
+}
+.fa-trash{
+  color:red;
+}
+
+.component {
+  background-color: white;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+}
+
+.fa {
+  color: #004de6;
+  font-size: 40px;
+}
+
+.submit_btn{
+  background-color: #f2f2f2;
+  color:black;
+  border-color: black;
+}
+
+
+
+
+.submit_btn:hover{
+  background-color: #004de6;
+  color:#f2f2f2;
+  border-color: #004de6;
+}
+
+.active{
+  background-color: #004de6;
+  color:#f2f2f2;
+  border-color: #004de6; 
+}
+

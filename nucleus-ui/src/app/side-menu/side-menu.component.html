@@ -1,0 +1,13 @@
+<!-- Bootstrap CSS -->
+<div id="mySidenav" class="sidenav border"  id="sidebar">
+   <!-- <h1>Hello, {{user_name}}</h1>  -->
+    <p-accordion [multiple]="true">
+        <p-accordionTab header="Reports" *ngIf="reports!=[]">
+            <app-report-list></app-report-list>
+        </p-accordionTab>
+        <p-accordionTab header="Dashboards">
+            <app-dashboard-list pTooltip="View Dashboards"></app-dashboard-list>
+        </p-accordionTab>
+    </p-accordion>
+           
+  </div>

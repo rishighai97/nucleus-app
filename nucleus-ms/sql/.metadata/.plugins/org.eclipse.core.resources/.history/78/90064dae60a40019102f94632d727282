@@ -1,0 +1,71 @@
+package com.example.repository;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
+
+import com.example.config.SqlConnectionFactory;
+import com.example.web.Request;
+
+@Repository
+
+@Qualifier("jdbc")
+public class JdbcSqlRepository implements SqlRepository{
+	//private JdbcTemplate jdbcTemplate;
+//	private static Request request;
+//	@Autowired
+//	public JdbcSqlRepository(DataSource dataSource) {
+//		jdbcTemplate = new JdbcTemplate(dataSource);
+//	}
+	List<List<Object>> data=new ArrayList<>();
+	List<Object> temp;
+
+
+	@Override
+	public List<List<Object>> getData(String query,Request request) {
+		
+		SqlConnectionFactory connectionFactory = new SqlConnectionFactory();
+		connectionFactory.setConnection(request);
+		Connection conn = connectionFactory.getConnection();
+		String sql= query;
+		PreparedStatement ps;
+		try {
+			ps = conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				temp = new ArrayList<>();
+				temp.add(rs.getObject("id"));
+				temp.add(rs.getObject("name"));
+				temp.add(rs.getObject("img_path"));
+				temp.add(rs.getObject("discount"));
+				temp.add(rs.getObject("currency"));
+				temp.add(rs.getObject("can_buy"));
+				temp.add(rs.getObject("description"));
+				data.add(temp);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			if(conn!=null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+//		jdbcTemplate.query(query, (rs, rowNum) -> {
+//			
+//			return data;
+//		});
+		return data;
+	}
+	
+}

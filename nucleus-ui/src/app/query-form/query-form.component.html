@@ -1,0 +1,73 @@
+<p-toast position="bottom-center"></p-toast>  
+  <form [formGroup]="queryForm" (submit)="handleQuerySubmit($event)">
+      <div class="card-body">
+          <div class="form-group">
+                <label class="lead">Query:</label>
+                <textarea class="form-control textarea" formControlName="query" ></textarea>
+          </div>
+
+          
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <button pTooltip="Add a report" tooltipPosition="top" class="btn" [ngClass]="{'active': type=='report'}" (click)="getType('report')">Report</button>
+            <button pTooltip="Add a dashboard" tooltipPosition="top" class="btn" [ngClass]="{'active': type=='dashboard'}"  (click)="getType('dashboard')">Dashboard</button>
+        </div>
+          <button class="btn float-right submit_btn">Submit</button>
+          <div class="form-group mt-4">
+
+              <form class="form-inline" [formGroup]="reportForm" *ngIf="type=='report'">
+                  <div class="input-group mb-2 mr-sm-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-pencil"></i></div>
+                      </div>
+                      <input
+                        formControlName="report_name"
+                        type="text"
+                        class="form-control"
+                        placeholder="Report Name"
+                      />
+                    </div>
+              </form>    
+            <form class="form-inline" [formGroup]="dashboardForm" *ngIf="type=='dashboard'">
+                
+                <div class="input-group mb-2 mr-sm-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-pencil"></i></div>
+                    </div>
+                    <input
+                      formControlName="dashboard_name"
+                      type="text"
+                      class="form-control"
+                      placeholder="Dashboard Name"
+                    />
+                  </div>
+
+                  <div class="input-group mb-2 mr-sm-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-tag"></i></div>
+                    </div>
+                    <input
+                      formControlName="x_label"
+                      type="text"
+                      class="form-control"
+                      placeholder="X - label"
+                    />
+                  </div>
+
+
+                <div class="input-group mb-2 mr-sm-3">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-database"></i></div>
+                    </div>
+                    <select class="custom-select" formControlName="chart_type">
+                      <option value="bar" selected>Bar</option>
+                      <option value="pie">Pie</option>
+                      <option value="line">Line</option>
+                     
+                    </select>
+                  </div>
+
+
+            </form>
+          </div>
+      </div>
+  </form>

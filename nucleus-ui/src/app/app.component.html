@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="row">
+
+  <div class="col col-sm-2 col-md-2 col-lg-2" *ngIf="isLoggedIn">
+    <app-side-menu></app-side-menu>
+  </div>
+  <div [ngClass]="{'col-sm-10':isLoggedIn,'col-sm-12':!isLoggedIn}">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+<!-- <app-table></app-table> -->
+
+<!-- <app-data-source></app-data-source> -->

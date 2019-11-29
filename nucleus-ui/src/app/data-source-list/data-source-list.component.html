@@ -1,0 +1,9 @@
+<!-- <span class="alert alert-warning" *ngIf="connections.length === 0"
+  >No data sources set up at the moment</span> -->
+      <p-accordion styleClass="accordian-override" [multiple]="true">
+          <h1 class="lead">Data Sources</h1>
+          <app-data-source-item *ngFor="let connection of connections" (connect)="handleSelectedConnections($event)"  [connection]="connection"></app-data-source-item>
+      </p-accordion>
+
+
+

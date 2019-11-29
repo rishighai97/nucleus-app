@@ -1,0 +1,7 @@
+::ng-deep .accordian-override {
+  width: 300px;
+  
+}
+/* :host(::ng-deep .accordian-override::-ms-expand){
+    background-color: red;
+} */

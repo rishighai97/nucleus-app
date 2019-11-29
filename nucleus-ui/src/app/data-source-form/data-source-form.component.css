@@ -1,0 +1,23 @@
+.submit_btn{
+    background-color: #f2f2f2;
+    color:black;
+    border-color: black;
+}
+
+
+.fa-plus-circle{
+    color: blue;
+    font-size: 50px;
+}
+
+.submit_btn:hover{
+    background-color: #004de6;
+    color:#f2f2f2;
+    border-color: #004de6;
+}
+
+.active{
+    background-color: #004de6;
+    color:#f2f2f2;
+    border-color: #004de6; 
+}

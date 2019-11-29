@@ -1,0 +1,12 @@
+<p-accordionTab>
+  <p-header>
+    <i class="fa fa-database"></i>&nbsp;
+    {{ connection.data_source_name }}
+    <div class="float-right">
+      <p-checkbox [(ngModel)]="value" binary="true" (click)="$event.stopPropagation(); addConnection()"></p-checkbox>
+    </div>
+  </p-header>
+
+  <p-tree [value]="data" *ngIf="connection.type==='jdbc'"> </p-tree>
+  <div class="lead" *ngIf="connection.type ==='rest'">Rest Service</div>
+</p-accordionTab>

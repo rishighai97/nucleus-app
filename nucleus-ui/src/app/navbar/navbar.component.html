@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <!-- <span id="openBtn" style="font-size:25px;cursor:pointer;color:#ffffff" (click)="toggleNav()">&#9776;</span> -->
+    <a class="navbar-brand ml-2" href="#"><img src="../../assets/images/nucleus.png" style="height:40px;width:40px;" class="img-responsive"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item active">
+              <a class="nav-link" routerLink="/home" *ngIf="!isLoggedIn">Home <span class="sr-only">(current)</span></a>
+            </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login" *ngIf="!isLoggedIn">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signup" *ngIf="!isLoggedIn">Signup</a>
+        </li>
+        <li class="nav-item">
+            <a pTooltip="Developer Dashboard" tooltipPosition="bottom" class="nav-link" routerLink="/data_source" *ngIf="user_role==='ROLE_DEV'" href="#">
+              <i class="fa fa-th"></i>
+            </a>
+          </li>
+        <li class="nav-item">
+          <a pTooltip="Logout" tooltipPosition="bottom" class="nav-link" (click)="logout($event)" *ngIf="isLoggedIn" href="#">
+            <i class="fa fa-sign-out"></i> 
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>

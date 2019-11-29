@@ -1,0 +1,41 @@
+<!-- <div class="col col-sm-7 col-md-7 col-lg-7">
+  <div class="card">
+    <div class="card-header">SQL Connection Information</div>
+    <div class="card-body">
+      <form [formGroup]="sqlForm" (click)="handleSubmit($event)">
+          <div class="form-group">
+              <label>Data Source Name</label>
+              <input class="form-control" [class.is-invalid]="errors.data_source_name" formControlName="data_source_name" />
+              <span class="text-danger">{{errors.data_source_name}}</span>
+            </div>
+        <div class="form-group">
+          <label>Driver Class Name</label>
+          <input class="form-control" [class.is-invalid]="errors.driver_class_name" formControlName="driver_class_name" />
+          <span class="text-danger">{{errors.driver_class_name}}</span>
+        </div>
+        <div class="form-group">
+          <label>Url</label>
+          <input class="form-control" [class.is-invalid]="errors.url" formControlName="url" />
+          <span class="text-danger">{{errors.url}}</span>
+        </div>
+        <div class="form-group">
+          <label>Username</label>
+          <input class="form-control" [class.is-invalid]="errors.username" formControlName="username" />
+          <span class="text-danger">{{errors.username}}</span>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input
+            class="form-control"
+            type="password"
+            formControlName="password"
+            [class.is-invalid]="errors.password"
+          />
+          <span class="text-danger">{{errors.password}}</span>
+        </div>
+        
+        <button class="btn btn-primary bg-red" (click)="sqlFormSubmit()">Submit</button>
+      </form>
+    </div>
+  </div>
+</div> -->

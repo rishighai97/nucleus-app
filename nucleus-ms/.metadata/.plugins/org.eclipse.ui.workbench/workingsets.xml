@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1565108123771_0" label="Java Main Sources" name="Java Main Sources">
+<item elementID="=json/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=json/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=json/target\/generated-sources\/annotations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=nucleus-core/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=nucleus-core/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=nucleus-core/target\/generated-sources\/annotations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=sql/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=sql/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=sql/target\/generated-sources\/annotations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1565108123783_1" label="Java Test Sources" name="Java Test Sources">
+<item elementID="=json/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=json/target\/generated-test-sources\/test-annotations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=nucleus-core/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=nucleus-core/target\/generated-test-sources\/test-annotations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=sql/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=sql/target\/generated-test-sources\/test-annotations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1565108125222_2" label="Window Working Set" name="Aggregate for window 1565108125222"/>
+</workingSetManager>

@@ -1,0 +1,24 @@
+
+    <div class="d-flex justify-content-center background">
+        <div class="card component col col-sm-5 col-md-5 col-lg-5 mt-4 ">
+            <div class="lead mt-1">Login</div>
+            <hr />
+            <div class="card-body">
+                <form (submit)="doLogin($event)" method="POST" [formGroup]="loginForm">
+                    <div class="form-group mt-1">
+                      <label for="username">Username</label>
+                      <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter username" formControlName="username">
+                    </div>
+                    <div class="form-group mt-4">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn submit_btn mt-2">Submit</button>
+                    </div>
+                  </form>
+                <a routerLink="signup" style="float:right;color:#004de6">Don't have an account?</a>
+            </div>
+          </div>
+    </div>
+  
